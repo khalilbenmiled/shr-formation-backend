@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  eureka-container:
+    image: eureka-app:1
+    build:
+      context: ./
+      dockerfile: dockerfile
+    volumes:
+      - /data/eureka-app
+    ports:
+      - "8761:8761"
